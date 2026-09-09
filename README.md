@@ -42,21 +42,19 @@ Severity is treated as a first-class analytic variable rather than a simple inci
 - Severity-weighted classification of offence categories reaches **99.22% accuracy** vs. 97.85% for a count-based baseline.
 
 ## Dataset
-
+Crime_Reports_with_Severity_Scores.csv
 Incident-level crime data for the City of Cambridge, Massachusetts (2009–2025), published via the Cambridge Police Department's Annual Crime Reports and open data portal (November 2025) — 106,350 incidents.
 
 ## Repository Structure
 
 ```
 .
-├── data/            # Raw / processed crime data (see data/README for source & access)
-├── notebooks/        # Exploratory analysis and ablation studies
-├── src/
-│   ├── severity/      # CSS construction: NIBRS labelling, harm weights, ONS multipliers, transforms
-│   ├── forecasting/    # Two-stage severity-aware daily/weekly prediction models
-│   └── evaluation/     # Metrics, ablation, and figure generation
-├── figures/          # Generated plots (histograms, severity rankings, feature importance, etc.)
-└── README.md
+├── Last.ipynb                              # Full pipeline: CSS construction, two-stage
+│                                            # forecasting, ablations, feature importance, figures
+├── Crime_Reports_with_Severity_Scores.csv   # Cambridge, MA incident-level crime data with
+│                                            # computed Crime Severity Scores
+├── README.md
+└── LICENSE                                 # MIT (code only — see License section below)
 ```
 
 *(Adjust this structure to match what you actually push.)*
